@@ -1,0 +1,24 @@
+public class Animal {
+    public Animal walk(){
+        // walk
+        return this;
+    }
+}
+
+public class Dog extends Animal{
+    public Dog bark(){
+        // bark
+        return this;
+    }
+    public Dog scratch(){
+        // scratch
+        return this;
+    }
+}
+
+I'm trying to achieve this,
+
+Dog dog = new Dog()
+    .bark()
+    .walk() // error: required Dog but provided Animal, and so it can't find the child method.
+    .scratch();
